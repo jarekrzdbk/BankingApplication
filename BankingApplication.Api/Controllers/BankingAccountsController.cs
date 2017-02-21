@@ -22,9 +22,16 @@ namespace BankingApplication.WebApi
         [HttpGet]
         [Route("api/BankingAccounts/userStatus")]
         public IHttpActionResult GetUserStatus()
-        {         
-            var model = _bankingAccount.GetUserData(User.Identity.Name);
-            return Ok(model);
+        {
+            try
+            {
+                var model = _bankingAccount.GetUserData(User.Identity.Name);
+                return Ok(model);
+            }
+            catch(Exception e)
+            {
+                return InternalServerError(e);
+            }
         }
 
         [Authorize]
@@ -32,16 +39,30 @@ namespace BankingApplication.WebApi
         [Route("api/BankingAccounts/sendMoney")]
         public IHttpActionResult Post_SendMoney(TransferToUserModelView model)
         {
-            _bankingAccount.SendMoney(User.Identity.Name, model.UserName, model.Amount, model.Message);
-            return Ok();
+            try
+            {
+                _bankingAccount.SendMoney(User.Identity.Name, model.UserName, model.Amount, model.Message);
+                return Ok();
+            }
+            catch(Exception e)
+            {
+                return InternalServerError(e);
+            }
         }
         [Authorize]
         [HttpPost]
         [Route("api/BankingAccounts/depositMoney")]
         public IHttpActionResult Post_DepositMoney([FromBody] double amount)
         {
-            _bankingAccount.DepositMoney(User.Identity.Name, amount);
-            return Ok();
+            try
+            {
+                _bankingAccount.DepositMoney(User.Identity.Name, amount);
+                return Ok();
+            }
+            catch(Exception e)
+            {
+                return InternalServerError(e);
+            }
         }
 
         [Authorize]
@@ -49,8 +70,15 @@ namespace BankingApplication.WebApi
         [Route("api/BankingAccounts/withdrawMoney")]
         public IHttpActionResult Post_WithdrawMoney([FromBody] double amount)
         {
-            _bankingAccount.WithdrawMoney(User.Identity.Name, amount);
-            return Ok();
+            try
+            {
+                _bankingAccount.WithdrawMoney(User.Identity.Name, amount);
+                return Ok();
+            }
+            catch(Exception e)
+            {
+                return InternalServerError(e);
+            }
         }
 
     }
