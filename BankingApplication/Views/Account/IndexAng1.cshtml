@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@if (Request.IsAuthenticated)
+{
+    <h2>Banking dashboard </h2>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="~/Scripts/App/userOperationsModule/index.js"></script>
+    <script src="~/Scripts/App/userOperationsModule/controllers/index.js"></script>
+    <script src="~/Scripts/App/userOperationsModule/controllers/userStatusController.js"></script>
+    <script src="~/Scripts/App/userOperationsModule/controllers/depositMoneyController.js"></script>
+    <script src="~/Scripts/App/userOperationsModule/controllers/withdrawMoneyController.js"></script>
+    <script src="~/Scripts/App/userOperationsModule/controllers/sendMoneyController.js"></script>
+    <script src="~/Scripts/App/app.js"></script>
+
+    <div ng-app="site">
+        <div ng-view>
+        </div>
+    </div>
+
+}
+else
+{
+    <h2>You are not Authenticated!</h2>
+}
+

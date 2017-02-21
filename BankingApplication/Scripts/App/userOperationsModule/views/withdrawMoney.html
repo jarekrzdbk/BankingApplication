@@ -1,0 +1,28 @@
+﻿<div>
+    <div ng-controller="withdrawMoneyController as mc" id="divDataBody" class="container entity">
+        <form name="depositForm" class="form-horizontal container-fluid" ng-submit="mc.sendWithdrow()">
+
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <div class="form-group col-md-12 col-xs-12">
+                        <label>Amount to withdraw</label>
+                        <div class="input-group">
+                            <input name="title" class="form-control" ng-maxlength="100" type="text" required ng-model="mc.Amount" autofocus />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary" ng-disabled="depositForm.$invalid">Send</button>
+            </div>
+        </form>
+        <div>
+            <label>{{mc.Status}}</label>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a href="#!/home">Back</a>
+</div>
+

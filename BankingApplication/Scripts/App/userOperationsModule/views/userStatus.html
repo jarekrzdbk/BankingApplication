@@ -1,0 +1,36 @@
+﻿<div>
+    <h2>User Profile</h2>
+</div>
+<div><h3>Available Amount: {{result.AvailableAmount}}</h3></div>
+<div class="row">
+    <div class="container">
+        <ul>
+            <li><a href="#!/deposit">Deposit money</a></li>
+            <li><a href="#!/withdrawMoney">Withdraw Money</a></li>
+            <li><a href="#!/sendMoney">Transfer Money</a></li>
+        </ul>
+    </div>
+    <div>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>User To</th>
+                    <th>User From</th>
+                    <th>Amount</th>
+                    <th>Date/Time</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tr ng-repeat="a in result.History">
+                <td>{{a.UserTo}}</td>
+                <td>{{a.UserFrom}}</td>
+                <td>{{a.Amount}}</td>
+                <td>{{a.DateTime}}</td>
+                <td>{{a.Message}}</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <label>{{Status}}</label>
+    </div>
+</div>
