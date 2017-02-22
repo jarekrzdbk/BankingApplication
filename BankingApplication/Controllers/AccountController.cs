@@ -8,8 +8,8 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using BankingApplication.Api.Entities;
-using BankingApplication.Api.Models;
+using BankingApplication.Entities;
+using BankingApplication.Models;
 
 namespace BankingApplication.Controllers
 {

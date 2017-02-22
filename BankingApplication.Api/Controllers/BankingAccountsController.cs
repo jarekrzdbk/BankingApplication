@@ -1,5 +1,5 @@
-﻿using BankingApplication.Api.BLL.BusinessServicesInterfaces;
-using BankingApplication.Api.Models;
+﻿using BankingApplication.BLL.BusinessServicesInterfaces;
+using BankingApplication.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

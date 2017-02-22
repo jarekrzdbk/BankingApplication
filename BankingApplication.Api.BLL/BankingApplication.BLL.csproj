@@ -74,6 +74,10 @@
       <Project>{806ddbbb-df0c-4100-aa90-d8b8bc8317dd}</Project>
       <Name>BankingApplication.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BankingApplication.Common\BankingApplication.Common.csproj">
+      <Project>{E302DF7C-711E-43EC-914D-EE83741354D8}</Project>
+      <Name>BankingApplication.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankingApplication.Api.Models
+namespace BankingApplication.Models
 {
     public class TransferToUserModelView
     {

@@ -10,9 +10,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using BankingApplication.Api.Models;
-using BankingApplication.Api.Entities;
-using BankingApplication.Api.DAL;
+using BankingApplication.Models;
+using BankingApplication.Entities;
+using BankingApplication.DAL;
 
 namespace BankingApplication
 {

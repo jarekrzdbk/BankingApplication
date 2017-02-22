@@ -4,8 +4,8 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
-using BankingApplication.Api.DAL;
-using BankingApplication.Api.Entities;
+using BankingApplication.DAL;
+using BankingApplication.Entities;
 using Owin;
 
 namespace BankingApplication

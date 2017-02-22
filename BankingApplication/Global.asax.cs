@@ -1,9 +1,8 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
-using BankingApplication.Api.BLL.BusinessServices;
-using BankingApplication.Api.BLL.BusinessServicesInterfaces;
-using BankingApplication.App_Start;
+using BankingApplication.BLL.BusinessServices;
+using BankingApplication.BLL.BusinessServicesInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,21 +23,6 @@ namespace BankingApplication
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
-            //var builder = new ContainerBuilder();
-            //builder.RegisterType<BankingAccountBS>().As<IBankingAccount>();
-
-
-
-            //builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
-            //builder.RegisterControllers(typeof(MvcApplication).Assembly);
-            //var container = builder.Build();
-            //var webApiResolver = new AutofacWebApiDependencyResolver(container);
-            //GlobalConfiguration.Configuration.DependencyResolver = webApiResolver;
-            //var mvcResolver = new AutofacDependencyResolver(container);
-            //DependencyResolver.SetResolver(mvcResolver);
-
-
         }
     }
 }

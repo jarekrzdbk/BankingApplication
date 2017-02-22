@@ -1,18 +1,18 @@
-namespace BankingApplication.Api.DAL.Migrations
+namespace BankingApplication.DAL.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<BankingApplication.Api.DAL.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<BankingApplication.DAL.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(BankingApplication.Api.DAL.ApplicationDbContext context)
+        protected override void Seed(BankingApplication.DAL.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -3,11 +3,11 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using BankingApplication.Api.Entities;
+using BankingApplication.Entities;
 
-namespace BankingApplication.Api.DAL
+namespace BankingApplication.DAL
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
     {
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -26,7 +26,7 @@ namespace BankingApplication.Api.DAL
 
             base.OnModelCreating(modelBuilder);
         }
-        public DbSet<Transaction> Transactions { get; set; }
+        public virtual DbSet<Transaction> Transactions { get; set; }
 
     }
 }

@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankingApplication.Api.Entities
+namespace BankingApplication.Entities
 {
-    public class Transaction
+    public class Transaction 
     {
         [Key]
         public int Id { get; set; }

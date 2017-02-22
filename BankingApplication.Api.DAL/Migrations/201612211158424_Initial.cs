@@ -1,4 +1,4 @@
-namespace BankingApplication.Api.DAL.Migrations
+namespace BankingApplication.DAL.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
