@@ -91,11 +91,23 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BankingApplication.Api.BLL\BankingApplication.BLL.csproj">
-      <Project>{3fabc50a-fbb5-4350-805f-ca0083e6bcfe}</Project>
+    <ProjectReference Include="..\BankingApplication.BLL\BankingApplication.BLL.csproj">
+      <Project>{3FABC50A-FBB5-4350-805F-CA0083E6BCFE}</Project>
       <Name>BankingApplication.BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BankingApplication.Api.Models\BankingApplication.Models.csproj">
+    <ProjectReference Include="..\BankingApplication.Common\BankingApplication.Common.csproj">
+      <Project>{e302df7c-711e-43ec-914d-ee83741354d8}</Project>
+      <Name>BankingApplication.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BankingApplication.DAL\BankingApplication.DAL.csproj">
+      <Project>{1cafbbb4-8b5f-43e0-bfe5-0e6ebb7a864c}</Project>
+      <Name>BankingApplication.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BankingApplication.Entities\BankingApplication.Entities.csproj">
+      <Project>{67ee6266-e1ab-4941-9568-950a90f50692}</Project>
+      <Name>BankingApplication.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BankingApplication.Models\BankingApplication.Models.csproj">
       <Project>{806ddbbb-df0c-4100-aa90-d8b8bc8317dd}</Project>
       <Name>BankingApplication.Models</Name>
     </ProjectReference>

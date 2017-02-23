@@ -85,11 +85,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BankingApplication.Api.Entities\BankingApplication.Entities.csproj">
+    <ProjectReference Include="..\BankingApplication.Entities\BankingApplication.Entities.csproj">
       <Project>{67ee6266-e1ab-4941-9568-950a90f50692}</Project>
       <Name>BankingApplication.Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BankingApplication.Api.Models\BankingApplication.Models.csproj">
+    <ProjectReference Include="..\BankingApplication.Models\BankingApplication.Models.csproj">
       <Project>{806ddbbb-df0c-4100-aa90-d8b8bc8317dd}</Project>
       <Name>BankingApplication.Models</Name>
     </ProjectReference>
