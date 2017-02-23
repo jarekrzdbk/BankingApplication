@@ -26,7 +26,7 @@ namespace BankingApplication.DAL
 
             base.OnModelCreating(modelBuilder);
         }
-        public virtual DbSet<Transaction> Transactions { get; set; }
+        public virtual IDbSet<Transaction> Transactions { get; set; }
 
     }
 }

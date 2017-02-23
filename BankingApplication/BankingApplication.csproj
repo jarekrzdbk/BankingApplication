@@ -281,6 +281,7 @@
     <Content Include="package.json" />
     <None Include="Properties\PublishProfiles\bankingapp - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\bankingapp - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\bankingapptest - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

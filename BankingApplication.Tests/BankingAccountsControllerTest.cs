@@ -57,66 +57,43 @@ namespace BankingApplication.Tests
 
             //Assert
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.Content.History.Count, 3);
-            Assert.AreEqual(result.Content.History[0].Amount, 100);
-            Assert.AreEqual(result.Content.History[0].UserTo, "user1@test.com");
-            Assert.AreEqual(result.Content.History[0].UserFrom, null);
+            _bankingAccountMock.Verify(m => m.GetUserData("user1@test.com"), Times.Once);
         }
 
         [TestMethod]
         public void Deposit_Money()
         {
             //Arrange
-            _bankingAccountMock.Setup(x => x.DepositMoney("user1@test.com",125)).Callback(()=> {
-                userViewModel.AvailableAmount += 125;
-                userViewModel.History.Add(new TransactionViewModel { Amount = 125, UserFrom = null,UserTo = "user1@test.com" });
-            });
+            _bankingAccountMock.Setup(x => x.DepositMoney("user1@test.com", 125));
 
             var identity = new GenericIdentity("user1@test.com");
             Thread.CurrentPrincipal = new GenericPrincipal(identity, null);
             bankingAccountsController.Request = new HttpRequestMessage();
             bankingAccountsController.Configuration = new HttpConfiguration();
-            var historyCount = userViewModel.History.Count;
-            var availableAmmount = userViewModel.AvailableAmount;
 
             //Act
             var result = bankingAccountsController.Post_DepositMoney(125);
 
             //Assert
             _bankingAccountMock.Verify(m => m.DepositMoney("user1@test.com", 125), Times.Once);
-
-            Assert.AreEqual(userViewModel.History.Count, historyCount + 1);
-            Assert.AreEqual(userViewModel.History.Last().Amount, 125);
-            Assert.AreEqual(userViewModel.AvailableAmount, availableAmmount + 125);
-            Assert.AreEqual(userViewModel.History.Last().UserTo, "user1@test.com");
         }
 
         [TestMethod]
         public void Withdraw_Money()
         {
             //Arrange
-            _bankingAccountMock.Setup(x => x.WithdrawMoney("user1@test.com", 125)).Callback(() => {
-                userViewModel.AvailableAmount -= 125;
-                userViewModel.History.Add(new TransactionViewModel { Amount = 125, UserFrom = "user1@test.com", UserTo = null });
-            });
+            _bankingAccountMock.Setup(x => x.WithdrawMoney("user1@test.com", 125));
 
             var identity = new GenericIdentity("user1@test.com");
             Thread.CurrentPrincipal = new GenericPrincipal(identity, null);
             bankingAccountsController.Request = new HttpRequestMessage();
             bankingAccountsController.Configuration = new HttpConfiguration();
-            var historyCount = userViewModel.History.Count;
-            var availableAmmount = userViewModel.AvailableAmount;
 
             //Act
             var result = bankingAccountsController.Post_WithdrawMoney(125);
 
             //Assert
             _bankingAccountMock.Verify(m => m.WithdrawMoney("user1@test.com", 125), Times.Once);
-
-            Assert.AreEqual(userViewModel.History.Count, historyCount + 1);
-            Assert.AreEqual(userViewModel.History.Last().Amount, 125);
-            Assert.AreEqual(userViewModel.AvailableAmount, availableAmmount - 125);
-            Assert.AreEqual(userViewModel.History.Last().UserFrom, "user1@test.com");
         }
     }
 }

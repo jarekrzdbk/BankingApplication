@@ -10,7 +10,7 @@ namespace BankingApplication.DAL
 {
     public interface IApplicationDbContext :  IDisposable
     {
-        DbSet<Transaction> Transactions { get; set; }
+        IDbSet<Transaction> Transactions { get; set; }
         int SaveChanges();
     }
 }
