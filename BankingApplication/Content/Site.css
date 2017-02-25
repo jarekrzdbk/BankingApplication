@@ -22,3 +22,7 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.custom{
+    background:rgba(218, 57, 57, 0.32);
+}

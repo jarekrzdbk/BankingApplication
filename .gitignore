@@ -273,3 +273,27 @@ __pycache__/
 
 # Cake - Uncomment if you are using it
 # tools/
+/BankingApplication/app/user/withdraw-money.component.js.map
+/BankingApplication/app/user/withdraw-money.component.js
+/BankingApplication/app/user/user.service.js.map
+/BankingApplication/app/user/user.service.js
+/BankingApplication/app/user/user.module.js.map
+/BankingApplication/app/user/user.module.js
+/BankingApplication/app/user/user.model.js.map
+/BankingApplication/app/user/user.model.js
+/BankingApplication/app/user/user-status.component.js.map
+/BankingApplication/app/user/user-status.component.js
+/BankingApplication/app/user/transaction.model.js.map
+/BankingApplication/app/user/transaction.model.js
+/BankingApplication/app/user/send-money.component.js.map
+/BankingApplication/app/user/send-money.component.js
+/BankingApplication/app/user/deposit-money.component.js.map
+/BankingApplication/app/user/deposit-money.component.js
+/BankingApplication/app/main.js
+/BankingApplication/app/app.module.js.map
+/BankingApplication/app/app.module.js
+/BankingApplication/app/app.component.js.map
+/BankingApplication/app/app.component.js
+/BankingApplication/app/app-routing.module.js.map
+/BankingApplication/app/app-routing.module.js
+/BankingApplication/app/main.js.map
