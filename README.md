@@ -1,4 +1,5 @@
 # BankingApplication
+[![DOI](https://zenodo.org/badge/82912227.svg)](https://zenodo.org/badge/latestdoi/82912227)
 sample solution
 to run project: just build it in Visual Studio, if npm packages not installed on build, run npm install, in BankingApplication
 project directory
